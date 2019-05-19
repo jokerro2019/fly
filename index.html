@@ -8,24 +8,50 @@
 </head>
 <body>
     <style>
-       
-    img {
+
+    #bot-js {
         width: 200px;
+        height: 130px;
+        transition: all 2s;
         position: relative;
     }
 
-    #bot-js {
-        transition: all 5s;
+    #fly-js {
+        width: 200px;
+        height: 130px;
+        transition: all 0.1s;
+        position: relative;
+        font-size: 0;
     }
+    .raketa {
+        width: 50px;
+        height: 100px;
+        /* background: url(img/raketa.jpg) no-repeat center / cover; */
+        transform: rotate(90deg);
+        position: absolute;
+        transition: all 1s;
+    }
+
 
     </style>
     <div id="field">
-        <img src="img/fly.png" class="bot-js-start" style="top: 0px; left: 0" id="bot-js">
+        <div class="bot-js" style="top: 0; left: 0" id="bot-js">
+        <img src="img/fly.png">
+        </div>
+        <!-- <img src="img/fly.png" class="bot-js" style="top: 0px; left: 0" id="bot-js"> -->
     </div>
-    
-        <img src="img/fly.png" style="top: 0px; left: 0" id="fly-js">
-        <div>
-            Нажмите Enter для запуска бота :)
+    <div class="fly-js" style="top: 0px; left: 0" id="fly-js">
+            <img src="img/fly.png">
+            <img src="img/raketa.jpg" class="raketa raketa1" style="top: 50px; left: 230px">
+            <img src="img/raketa.jpg" class="raketa raketa2" style="top: 50px; left: 230px">
+            <img src="img/raketa.jpg" class="raketa raketa3" style="top: 50px; left: 230px">
+            <img src="img/raketa.jpg" class="raketa raketa4" style="top: 50px; left: 230px">
+    </div>
+        
+        <div class="test">
+               <h1> Press Enter to run the bot :)</h1>
+               <h1>Press 1, 2, 3, 4 to shoot :)</h1>
+               <h1>Control Fly ↑ ↓ ← →</h1>
         </div>
 
     <script src="js/script.js"></script>
